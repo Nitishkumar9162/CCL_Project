@@ -4,11 +4,14 @@
 <head>
   <title>Exam Registration – Sign Up</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
 
     
-    body { font-family: Arial, sans-serif; background-color: #039a12; }
+    body { font-family: Arial, sans-serif; background-color: #ffdede; }
     .container { max-width: 400px; margin: 50px auto; background: rgb(158, 232, 146); padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     h2 { text-align: center; margin-bottom: 20px; }
     .form-group { margin-bottom: 15px; }
@@ -29,35 +32,73 @@
   <form action="" method="post">
         {% csrf_token %} 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="Home.html">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Examination
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Result</a>
-          <a class="dropdown-item" href="#">Examination Hall Ticket</a>
-          <a class="dropdown-item" href="#">Exam Registration</a>
+<!-- <section class="a">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="mailto:info@practise.com">
+                        <p><i class="fa-solid fa-envelopes-bulk"></i> : info@practise.com</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="tel:09876543210">
+                        <p><i class="fa-solid fa-phone-volume"></i> : +91-9876543210</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://maps.app.goo.gl/c8oEuF7w47GTEaTU7">
+                        <p><i class="fa-solid fa-map"></i> : Ranchi, Jharkhand</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </p>
+                </div>
+            </div>
         </div>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
+    </section> -->
 
+    <nav class="navbar navbar-expand-lg navbar bg-light">
+        <a class="navbar-brand" href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjqUtbyiMDDP7aXZF7PhLY3rrD4rAPdKBng&s" width="50%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Examination
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Result</a>
+                        <a class="dropdown-item" href="#">Hall Ticket</a>
+                        <a class="dropdown-item" href="#">exam Registration</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
 
 
   <div class="container">
@@ -112,6 +153,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
 </html>

@@ -7,11 +7,263 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    
+    <title>SARALA BIRLA UNIVERSITY</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(IMG_2662.webp);
+        }
+
+        /* Header */
+        header {
+            background-color: rgb(12, 90, 54);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            background-image: url(IMG_2662.webp);
+            padding: 1rem;
+            background-color: #2e5c54;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        /* nav a {
+            color:white
+            text-decoration: none;
+            font-weight: bold;
+        } */
+
+        nav a:hover {
+            color: #f4d03f;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #1a3c34;
+            margin-bottom: 1rem;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .course-card {
+            background-image: url(IMG_2662.webp);
+            background-color: rgb(167, 201, 231);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .course-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background: #1a3c34;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #2e5c54;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3c34;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <!-- <h3>Login Here</h3> -->
+        {% csrf_token %} 
+    <header>
+        <h1>SARALA BIRLA UNIVERSITY</h1>
+        <p>Welcome to Excellence in Education</p>
+    </header>
+
+    <section class="a">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="mailto:info@practise.com">
+                        <p><i class="fa-solid fa-envelopes-bulk"></i> : info@practise.com</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="tel:09876543210">
+                        <p><i class="fa-solid fa-phone-volume"></i> : +91-9876543210</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://maps.app.goo.gl/c8oEuF7w47GTEaTU7">
+                        <p><i class="fa-solid fa-map"></i> : Ranchi, Jharkhand</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjqUtbyiMDDP7aXZF7PhLY3rrD4rAPdKBng&s" width="50%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Examination
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Result</a>
+                        <a class="dropdown-item" href="#">Hall Ticket</a>
+                        <a class="dropdown-item" href="#">exam Registration</a>
+                    </div>
+                    <a href=""
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>XYZ College is a premier institution dedicated to fostering academic excellence and innovation. Established in 1980, we offer a vibrant campus life, state-of-the-art facilities, and a commitment to shaping future leaders.</p>
+        </section>
+
+        <section id="courses" class="section">
+            <h2>Our Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Computer Science</h3>
+                    <p>Explore cutting-edge technology and programming with our comprehensive CS program.</p>
+                </div>
+                <div class="course-card">
+                    <h3>Business Administration</h3>
+                    <p>Develop leadership and management skills to excel in the corporate world.</p>
+                </div>
+                <div class="course-card">
+                    <h3>Biotechnology</h3>
+                    <p>Dive into the world of science and innovation with our biotech curriculum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required="">
+                <input type="email" placeholder="Your Email" required="">
+                <textarea placeholder="Your Message" rows="5" required=""></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 SARALA BIRLA UNIVERSITY. All rights reserved.</p>
+    </footer>
+
+
  <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
     <!-- Optional JavaScript; choose one of the two! -->
 

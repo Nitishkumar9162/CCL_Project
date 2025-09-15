@@ -1,0 +1,111 @@
+@media (max-width:2560px) {
+    .a{
+        background: #f8413d;
+        padding: 5px 0px;
+    }
+    .a a{
+        color: #fff;
+    }
+    .a p{
+        margin-bottom:0px;
+    }
+    .b{
+        padding: 50px 0px;
+    }
+    nav{
+        border-bottom: 1px solid red;
+    }
+    .navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-size: 22px;
+    }
+    .jkkreffe{
+        padding: 40px 0px;
+    }
+
+
+
+
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+
+
+.oo .col-md-7{
+    height: 500px;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media (max-width:1920px) {
+    
+}
+@media (max-width:1440px) {
+    
+}
+@media (max-width:1024px) {
+    
+}
+@media (max-width:768px) {
+    
+}
+@media (max-width:576px) {
+    
+}
+@media (max-width:425px) {
+    
+}
+@media (max-width:375px) {
+    
+}
+@media (max-width:320px) {
+    
+}

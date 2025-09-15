@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def HomePage(request):
     return render (request,'home.html')
+
 
 def SignupPage(request):
     if request.method=='POST':
